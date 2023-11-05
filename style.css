@@ -1,4 +1,7 @@
+
+
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: rgb(49, 48, 48);
@@ -8,6 +11,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  margin: 0;
 }
 
 .header {
@@ -15,8 +19,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  color: #FFD801;
-  padding: 30px;
+  color: #ffd801;
+  padding: 15px;
 }
 
 .header-header,
@@ -30,7 +34,7 @@ body {
 }
 
 .fa {
-  color: #FFD801;
+  color: #ffd801;
   padding: 2px;
   transition: transform 0.5s ease-in-out;
 }
@@ -47,10 +51,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 50px 50px -200px;
+  margin: 50px 50px 45px -200px;
   gap: 50px;
 }
-
 
 .grid-container {
   display: inline-grid;
@@ -69,21 +72,27 @@ a {
 }
 
 .btn-setting {
-    border-radius: 5px;
-    border: 1px solid #FFD801;
-    color: #FFD801;
-    background-color:  rgb(49, 48, 48);
-    padding: 5px;
-    transition-duration: 0.4s;
-    font-weight: bold;
-    
+  border-radius: 5px;
+  border: 1px solid #ffd801;
+  color: #ffd801;
+  background-color: rgb(49, 48, 48);
+  padding: 5px;
+  transition-duration: 0.4s;
+  font-weight: bold;
 }
 
 .btn-setting:hover {
-    cursor: pointer;
-    color: rgb(49, 48, 48);
-    background-color: #FFD801;
-    
+  cursor: pointer;
+  color: rgb(49, 48, 48);
+  background-color: #ffd801;
+}
+
+.yellow-button {
+  margin-bottom: 20px;
+}
+
+.big-button {
+  margin-bottom: 20px;
 }
 
 .color-section {
@@ -91,7 +100,7 @@ a {
   align-items: center;
   justify-content: space-around;
   gap: 10px;
-  color: #FFD801;;
+  color: #ffd801;
 }
 
 .rainbow-container {
@@ -99,7 +108,27 @@ a {
   align-items: center;
   justify-content: space-around;
   gap: 10px;
-  color: #FFD801;
+  color: #ffd801;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #ffd801;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.slider:hover .tooltip-text {
+  visibility: visible;
 }
 
 .switch {
@@ -125,8 +154,8 @@ a {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -138,17 +167,17 @@ a {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #FFD801;
+  background-color: #ffd801;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #FFD801;
+  box-shadow: 0 0 1px #ffd801;
 }
 
 input:checked + .slider:before {
@@ -159,11 +188,10 @@ input:checked + .slider:before {
 
 .footer {
   background-color: black;
-  color: #FFD801;
+  color: #ffd801;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: auto;
-  
 }

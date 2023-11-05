@@ -1,22 +1,25 @@
 const gridContainer = document.querySelector(".grid-container");
 
+
+const colorPicker = document.getElementById("color-picker");
+const toggle = document.getElementById("rainbow-toggle");
 const rainbowButton = document.querySelector(".rainbow-button");
 const yellowButton = document.querySelector(".yellow-button");
-const clearButton = document.querySelector(".clear-button");
-const bigButton = document.querySelector(".big-button");
-const mediumButton = document.querySelector(".medium-button");
 const smallButton = document.querySelector(".small-button");
-const toggle = document.getElementById("rainbow-toggle");
-const colorPicker = document.getElementById("color-picker");
+const mediumButton = document.querySelector(".medium-button");
+const bigButton = document.querySelector(".big-button");
+const clearButton = document.querySelector(".clear-button");
+
 
 colorPicker.addEventListener("click", painting);
 toggle.addEventListener("click", randomPainting);
 rainbowButton.addEventListener("click", randomPainting);
 yellowButton.addEventListener("click", rubberDuck);
-clearButton.addEventListener("click", clearGrid);
-bigButton.addEventListener("click", bigGrid);
-mediumButton.addEventListener("click", mediumGrid);
 smallButton.addEventListener("click", smallGrid);
+mediumButton.addEventListener("click", mediumGrid);
+bigButton.addEventListener("click", bigGrid);
+clearButton.addEventListener("click", clearGrid);
+
 
 
 //number of rows and columns
