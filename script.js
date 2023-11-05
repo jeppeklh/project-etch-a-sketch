@@ -7,13 +7,17 @@ const bigButton = document.querySelector(".big-button");
 const mediumButton = document.querySelector(".medium-button");
 const smallButton = document.querySelector(".small-button");
 const toggle = document.getElementById("rainbow-toggle");
+const colorPicker = document.getElementById("color-picker");
 
+colorPicker.addEventListener("click", painting);
+toggle.addEventListener("click", randomPainting);
 rainbowButton.addEventListener("click", randomPainting);
-yellowButton.addEventListener("click", changeBgToYellow);
+yellowButton.addEventListener("click", rubberDuck);
 clearButton.addEventListener("click", clearGrid);
 bigButton.addEventListener("click", bigGrid);
 mediumButton.addEventListener("click", mediumGrid);
 smallButton.addEventListener("click", smallGrid);
+
 
 //number of rows and columns
 let gridSize = 16;
@@ -62,11 +66,12 @@ function bigGrid() {
   painting();
 }
 
-function changeBgToYellow() {
+function rubberDuck() {
   const gridItems = document.querySelectorAll(".grid-item");
   gridItems.forEach((element) => {
     element.style.backgroundColor = "#FFD801";
   });
+  painting();
 }
 
 function clearGrid() {
@@ -74,6 +79,7 @@ function clearGrid() {
   gridItem.forEach((element) => {
     element.style.backgroundColor = "white";
   });
+  painting();
 }
 
 function changeGridSize(newSize, elementSize) {
@@ -91,6 +97,7 @@ function painting() {
       () => (element.style.backgroundColor = paintColor)
     );
   });
+  toggle.checked = false;
 }
 
 function randomPainting() {
@@ -105,16 +112,8 @@ function randomPainting() {
       () => (element.style.backgroundColor = randomColor)
     );
   });
-}
-
-if (toggle.checked === false) {
-  toggle.addEventListener("click", randomPainting);
   toggle.checked = true;
-} else {
-  toggle.addEventListener("click", painting);
-  toggle.checked = false; 
 }
-
 
 function start() {
   makeGrid(20, 25);

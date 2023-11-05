@@ -32,6 +32,11 @@ body {
 .fa {
   color: #FFD801;
   padding: 2px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa:hover {
+  transform: rotate(360deg) scale(1.2);
 }
 
 a {
